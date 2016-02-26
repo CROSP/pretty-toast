@@ -255,7 +255,6 @@ public class PrettyToast extends Toast {
      * Builder class for creating different types of toasts
      */
     public static class Builder {
-        ;
         private String mMessage;
         private String mLeftIcon;
         private String mRightIcon;
@@ -352,6 +351,7 @@ public class PrettyToast extends Toast {
             if (mCustomView != null) {
                 toast.mIsCreatedFromCustomResource = true;
                 toast.setView(mCustomView);
+                toast.setDuration(mShowDuration >= 0 ? mShowDuration : DEFAULT_TOAST_DURATION);
                 return toast;
             }
             // When layout resource provided it should contain

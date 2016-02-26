@@ -3,6 +3,7 @@ package ua.com.crosp.solutions.prettytoast;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -24,6 +25,7 @@ public class MainActivity extends Activity {
     private Button mButtonToastDim;
     private Button mButtonToastCustom;
     private Button mButtonToastError;
+    private Button mButtonToastCutomView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,6 +86,15 @@ public class MainActivity extends Activity {
                         .show();
             }
         });
-
+        mButtonToastCutomView = (Button) findViewById(R.id.button_custom_view_toast);
+        mButtonToastCutomView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new PrettyToast.Builder(getApplicationContext())
+                        .withCustomView(LayoutInflater.from(MainActivity.this).inflate(R.layout.toast_custom, null, false))
+                        .build()
+                        .show();
+            }
+        });
     }
 }

@@ -24,6 +24,7 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:text="Error Toast"/>
+
     <Button
         android:id="@+id/button_info_toast"
         android:layout_width="match_parent"
@@ -44,4 +45,11 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:text="Custom Toast"/>
+
+    <Button
+        android:id="@+id/button_custom_view_toast"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Custom View Toast"/>
 </LinearLayout>
