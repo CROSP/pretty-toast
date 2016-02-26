@@ -1,0 +1,61 @@
+apply plugin: 'com.android.library'
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'pretty-toast'
+
+    publishedGroupId = 'ua.com.crosp.solutions.library'
+    libraryName = 'Pretty-Toast'
+    artifact = 'pretty-toast'
+
+    libraryDescription = 'This is quite simple toast library, that make it easier to show and create custom toast. Library provides Builder which can be used to create flexible custom Toast messages'
+
+    siteUrl = 'https://github.com/CROSP/pretty-toast'
+    gitUrl = 'https://github.com/CROSP/pretty-toast.git'
+
+    libraryVersion = '0.1.0'
+
+    developerId = 'crosp'
+    developerName = 'Alexander Crospenko'
+    developerEmail = 'crospdevel@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        minSdkVersion 7
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.joanzapata.iconify:android-iconify:2.1.1'
+    compile 'com.joanzapata.iconify:android-iconify-material:2.1.1'
+    compile 'com.joanzapata.iconify:android-iconify-typicons:2.1.1'
+    compile 'com.joanzapata.iconify:android-iconify-entypo:2.1.1'
+    compile 'com.joanzapata.iconify:android-iconify-fontawesome:2.1.1'
+    compile 'com.joanzapata.iconify:android-iconify-material-community:2.1.1'
+    compile 'com.joanzapata.iconify:android-iconify-meteocons:2.1.1'
+    compile 'com.joanzapata.iconify:android-iconify-weathericons:2.1.1'
+    compile 'com.joanzapata.iconify:android-iconify-simplelineicons:2.1.1'
+    compile 'com.joanzapata.iconify:android-iconify-ionicons:2.1.1'
+}
+// Place it at the end of the file
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'

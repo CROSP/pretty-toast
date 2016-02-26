@@ -1,0 +1,53 @@
+<RelativeLayout
+    android:id="@+id/layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_toast_blue">
+
+    <ImageView
+        android:id="@+id/image_view_toast_icon_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/text_view_toast_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="5dp"
+        android:layout_toEndOf="@+id/image_view_toast_icon_left"
+        android:layout_toLeftOf="@+id/image_view_toast_icon_right"
+        android:layout_toRightOf="@+id/image_view_toast_icon_left"
+        android:layout_toStartOf="@+id/image_view_toast_icon_right"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10sp"
+        android:paddingRight="10sp"
+        android:paddingTop="10dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_toast_default"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/image_view_toast_icon_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="4dp"
+        android:visibility="gone"/>
+</RelativeLayout>
