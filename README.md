@@ -3,7 +3,7 @@ Pretty Toast
 
 ![Logo](http://i.imgur.com/40mG7Lj.png)
 
-This is quite simple toast library, that make it easier to show and create custom toast. Library provides Builder which can be used to create flexible custom Toast messages.
+This is quite simple toast library, that make it easier to show and create custom toast.
 
 This library provides following features :
 
