@@ -10,7 +10,7 @@ This library provides following features :
  * Bunch of predefined static methods for frequently used messages `Error`, `Info`,`Warning` ...
  * Flexible `Builder` class, so you construct almost any kind of toast message
  * Main class extends native `Toast` class
- * Support from Android 2.1 (API 7)
+ * Support from `Android 2.1` (`API 7`)
 
 
 Download and Installation 
