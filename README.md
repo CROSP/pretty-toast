@@ -38,7 +38,7 @@ Usage
 -----
 
 **NOTE** :
-If you want to use `Iconify Android` icons, you should call 
+If you want to use `Iconify Android` icons, you need to inject icons into yours `ApplicationContext`, invoke  
 ```java
 PrettyToast.initIcons();
 ```
@@ -57,6 +57,7 @@ Iconify
                 .with(new SimpleLineIconsModule())
                 .with(new IoniconsModule());
 ```
+By the way, you can call `PrettyToast.initIcons()` instead of code above. It does the same thing.
 
 Predefined static methods
 
