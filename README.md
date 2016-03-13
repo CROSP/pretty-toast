@@ -12,6 +12,10 @@ This library provides following features :
  * Main class extends native `Toast` class
  * Support starting from `Android 2.1` (`API 7`)
 
+Screenshots
+-----------
+
+![](http://im.ezgif.com/tmp/ezgif-3665762809.gif)
 
 Download and Installation 
 -------------------------
