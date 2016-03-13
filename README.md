@@ -15,7 +15,7 @@ This library provides following features :
 Screenshots
 -----------
 
-![](http://im.ezgif.com/tmp/ezgif-3665762809.gif)
+![](./screen-animation.gif)
 
 Download and Installation 
 -------------------------
@@ -25,17 +25,38 @@ Download [the latest AAR][1] or grab via Maven:
 <dependency>
     <groupId>ua.com.crosp.solutions.library</groupId>
     <artifactId>pretty-toast</artifactId>
-    <version>0.1.0</version>
+    <version>0.1.1</version>
 </dependency>
 ```
 or Gradle:
 ```groovy
-compile 'ua.com.crosp.solutions.library:pretty-toast:0.1.0''
+compile 'ua.com.crosp.solutions.library:pretty-toast:0.1.1'
 ```
 
 
 Usage
 -----
+
+**NOTE** :
+If you want to use `Iconify Android` icons, you should call 
+```java
+PrettyToast.initIcons();
+```
+Call it once in your. It should be called once, and `Application` class is great place for this, but you can also call it anywhere you want, `Iconify Library` takes care of filtering duplicates, so it will not affect on memory, but this doesn't mean that you should call `initIcons()` in a loop :)
+
+For sure, if you are already using `Iconify Library` you don't need to invoke `initIcons()`, than in your `Application` custom class you have to have something like this.
+```java
+Iconify
+                .with(new FontAwesomeModule())
+                .with(new EntypoModule())
+                .with(new TypiconsModule())
+                .with(new MaterialModule())
+                .with(new MaterialCommunityModule())
+                .with(new MeteoconsModule())
+                .with(new WeathericonsModule())
+                .with(new SimpleLineIconsModule())
+                .with(new IoniconsModule());
+```
 
 Predefined static methods
 
