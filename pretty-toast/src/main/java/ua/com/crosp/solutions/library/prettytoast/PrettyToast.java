@@ -49,9 +49,6 @@ public class PrettyToast extends Toast {
     private static final int DEFAULT_TEXT_COLOR = R.color.white;
     @LayoutRes
     private static final int DEFAULT_LAYOUT_RESOURCE = R.layout.toast_base;
-    private static LayoutInflater mInflater;
-    private static Toast mToast;
-    private static View mView;
     private boolean mIsCreatedFromCustomResource = false;
 
     /**
@@ -383,7 +380,7 @@ public class PrettyToast extends Toast {
                                     .sizeDp(mTextSize > 0 ? mTextSize : PrettyToast.DEFAULT_ICON_SIZE)
                                     .colorRes(mLeftIconColor != 0 ? mLeftIconColor : DEFAULT_ICON_COLOR));
                 } catch (Exception ex) {
-                    imageViewLeftIcon.setImageResource(R.drawable.ok);
+                    ex.printStackTrace();
                 }
                 imageViewLeftIcon.setVisibility(View.VISIBLE);
             }
@@ -395,7 +392,7 @@ public class PrettyToast extends Toast {
                             .sizeDp(mTextSize > 0 ? mTextSize : PrettyToast.DEFAULT_ICON_SIZE)
                             .colorRes(mRightIconColor != 0 ? mRightIconColor : DEFAULT_ICON_COLOR));
                 } catch (Exception ex) {
-                    imageViewRightIcon.setImageResource(R.drawable.ok);
+                    ex.printStackTrace();
                 }
                 imageViewRightIcon.setVisibility(View.VISIBLE);
             }
