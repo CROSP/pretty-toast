@@ -42,7 +42,7 @@ If you want to use `Iconify Android` icons, you need to inject icons into yours 
 ```java
 PrettyToast.initIcons();
 ```
-It should be called once, and `Application` class is great place for this, but you can also call it anywhere you want, `Iconify Library` takes care of filtering duplicates, so it will not affect on memory, but this doesn't mean that you should call `initIcons()` in a loop :)
+It should be called once, and `Application` class is great place for this, but you can also call it anywhere you want, `Iconify Library` takes care of filtering duplicates, so it will not waste your memory, but this doesn't mean that you should call `initIcons()` in a loop :)
 
 For sure, if you are already using `Iconify Library` you don't need to invoke `initIcons()`, than in your `Application` custom class you have to have something like this.
 ```java
