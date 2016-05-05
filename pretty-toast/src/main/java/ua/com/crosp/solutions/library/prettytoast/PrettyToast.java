@@ -373,6 +373,7 @@ public class PrettyToast extends Toast {
             ImageView imageViewLeftIcon = (ImageView) defaultView.findViewById(R.id.image_view_toast_icon_left);
             if (mLeftIconDrawable != null) {
                 imageViewLeftIcon.setImageDrawable(mLeftIconDrawable);
+                imageViewLeftIcon.setVisibility(View.VISIBLE);
             } else if (mLeftIcon != null) {
                 try {
                     imageViewLeftIcon.setImageDrawable(
@@ -386,6 +387,7 @@ public class PrettyToast extends Toast {
             }
             if (mRightIconDrawable != null) {
                 imageViewRightIcon.setImageDrawable(mRightIconDrawable);
+                imageViewRightIcon.setVisibility(View.VISIBLE);
             } else if (mRightIcon != null) {
                 try {
                     imageViewRightIcon.setImageDrawable(new IconDrawable(mContext, mRightIcon)
