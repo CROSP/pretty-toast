@@ -352,14 +352,14 @@ public class PrettyToast extends Toast {
                 return toast;
             }
             // When layout resource provided it should contain
+            View view;
             if (mCustomLayoutId > 0) {
-                View inflated = LayoutInflater.from(mContext).inflate(mCustomLayoutId, null, false);
-                toast.mIsCreatedFromCustomResource = true;
-                toast.setView(inflated);
+                view = LayoutInflater.from(mContext).inflate(mCustomLayoutId, null, false);
+            } else {
+                view = LayoutInflater.from(mContext).inflate(PrettyToast.DEFAULT_LAYOUT_RESOURCE, null, false);
             }
-            View defaultView = LayoutInflater.from(mContext).inflate(PrettyToast.DEFAULT_LAYOUT_RESOURCE, null, false);
             if (mMessage != null) {
-                TextView textView = (TextView) defaultView.findViewById(R.id.text_view_toast_main);
+                TextView textView = (TextView) view.findViewById(R.id.text_view_toast_main);
                 if (textView != null) {
                     if (mTextSize > 0) {
                         textView.setTextSize(mTextSize);
@@ -369,8 +369,8 @@ public class PrettyToast extends Toast {
                     textView.setTextColor(mTextColor > 0 ? mContext.getResources().getColor(mTextColor) : mContext.getResources().getColor(DEFAULT_ICON_COLOR));
                 }
             }
-            ImageView imageViewRightIcon = (ImageView) defaultView.findViewById(R.id.image_view_toast_icon_right);
-            ImageView imageViewLeftIcon = (ImageView) defaultView.findViewById(R.id.image_view_toast_icon_left);
+            ImageView imageViewRightIcon = (ImageView) view.findViewById(R.id.image_view_toast_icon_right);
+            ImageView imageViewLeftIcon = (ImageView) view.findViewById(R.id.image_view_toast_icon_left);
             if (mLeftIconDrawable != null) {
                 imageViewLeftIcon.setImageDrawable(mLeftIconDrawable);
                 imageViewLeftIcon.setVisibility(View.VISIBLE);
@@ -401,8 +401,8 @@ public class PrettyToast extends Toast {
             if (mGravity != null) {
                 toast.setGravity(mGravity.getGravity(), mGravity.getXOffset(), mGravity.getYOffset());
             }
-            defaultView.setBackgroundResource(mBackgroundResource > 0 ? mBackgroundResource : R.drawable.background_toast_blue);
-            toast.setView(defaultView);
+            view.setBackgroundResource(mBackgroundResource > 0 ? mBackgroundResource : R.drawable.background_toast_blue);
+            toast.setView(view);
             toast.setDuration(mShowDuration >= 0 ? mShowDuration : DEFAULT_TOAST_DURATION);
             return toast;
         }
