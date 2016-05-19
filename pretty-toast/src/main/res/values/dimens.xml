@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="text_size_toast_default">14sp</dimen>
+    <dimen name="margin_icon_default">4dp</dimen>
+    <dimen name="margin_text_default">5dp</dimen>
 </resources>

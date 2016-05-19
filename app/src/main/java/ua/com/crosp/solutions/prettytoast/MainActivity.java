@@ -25,7 +25,7 @@ public class MainActivity extends Activity {
     private Button mButtonToastDim;
     private Button mButtonToastCustom;
     private Button mButtonToastError;
-    private Button mButtonToastCutomView;
+    private Button mButtonToastCustomView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,14 +36,14 @@ public class MainActivity extends Activity {
         mButtonToastSuccess.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                PrettyToast.showSuccess(getApplicationContext(), "SUCCESS");
+                PrettyToast.showSuccess(getApplicationContext(), "SUCCESS","fa-android","fa-home");
             }
         });
         mButtonToastWarning = (Button) findViewById(R.id.button_warning_toast);
         mButtonToastWarning.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                PrettyToast.showWarning(getApplicationContext(), "WARNING");
+                PrettyToast.showWarning(getApplicationContext(), "WARNING","","fa-home");
             }
         });
         mButtonToastInfo = (Button) findViewById(R.id.button_info_toast);
@@ -86,8 +86,8 @@ public class MainActivity extends Activity {
                         .show();
             }
         });
-        mButtonToastCutomView = (Button) findViewById(R.id.button_custom_view_toast);
-        mButtonToastCutomView.setOnClickListener(new View.OnClickListener() {
+        mButtonToastCustomView = (Button) findViewById(R.id.button_custom_view_toast);
+        mButtonToastCustomView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 new PrettyToast.Builder(getApplicationContext())

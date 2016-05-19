@@ -374,7 +374,7 @@ public class PrettyToast extends Toast {
             if (mLeftIconDrawable != null) {
                 imageViewLeftIcon.setImageDrawable(mLeftIconDrawable);
                 imageViewLeftIcon.setVisibility(View.VISIBLE);
-            } else if (mLeftIcon != null) {
+            } else if (mLeftIcon != null && mLeftIcon.length() > 0) {
                 try {
                     imageViewLeftIcon.setImageDrawable(
                             new IconDrawable(mContext, mLeftIcon)
@@ -388,7 +388,7 @@ public class PrettyToast extends Toast {
             if (mRightIconDrawable != null) {
                 imageViewRightIcon.setImageDrawable(mRightIconDrawable);
                 imageViewRightIcon.setVisibility(View.VISIBLE);
-            } else if (mRightIcon != null) {
+            } else if (mRightIcon != null && mRightIcon.length() > 0) {
                 try {
                     imageViewRightIcon.setImageDrawable(new IconDrawable(mContext, mRightIcon)
                             .sizeDp(mTextSize > 0 ? mTextSize : PrettyToast.DEFAULT_ICON_SIZE)
