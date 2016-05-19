@@ -17,10 +17,12 @@ This library provides following features :
 I updated library to version 0.2.0. There are some important issues were fixed. Now popup window looks much better.
 So please use 0.2.0 version.
 
-Screenshots
------------
+Screenshots and Examples
+------------------------
 
 ![](./screen-animation.gif)
+
+You can download example app from [Google Play Store](https://play.google.com/store/apps/details?id=ua.com.crosp.solutions.prettytoast)
 
 Download and Installation 
 -------------------------
