@@ -13,7 +13,7 @@ ext {
     siteUrl = 'https://github.com/CROSP/pretty-toast'
     gitUrl = 'https://github.com/CROSP/pretty-toast.git'
 
-    libraryVersion = '0.1.1'
+    libraryVersion = '0.2.0'
 
     developerId = 'crosp'
     developerName = 'Alexander Molochko'
@@ -31,7 +31,7 @@ android {
         minSdkVersion 7
         targetSdkVersion 23
         versionCode 2
-        versionName "1.1"
+        versionName "2.0"
     }
     buildTypes {
         release {
