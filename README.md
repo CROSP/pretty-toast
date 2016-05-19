@@ -10,7 +10,12 @@ This library provides following features :
  * Bunch of predefined static methods for frequently used messages `Error`, `Info`,`Warning` ...
  * Flexible `Builder` class, so you construct almost any kind of toast message
  * Main class extends native `Toast` class
+ * No memory leaks
  * Support starting from `Android 2.1` (`API 7`)
+
+**UPDATE**
+I updated library to version 0.2.0. There are some important issues were fixed. Now popup window looks much better.
+So please use 0.2.0 version.
 
 Screenshots
 -----------
@@ -25,12 +30,12 @@ Download [the latest AAR][1] or grab via Maven:
 <dependency>
     <groupId>ua.com.crosp.solutions.library</groupId>
     <artifactId>pretty-toast</artifactId>
-    <version>0.1.1</version>
+    <version>0.2.0</version>
 </dependency>
 ```
 or Gradle:
 ```groovy
-compile 'ua.com.crosp.solutions.library:pretty-toast:0.1.1'
+compile 'ua.com.crosp.solutions.library:pretty-toast:0.2.0'
 ```
 
 
