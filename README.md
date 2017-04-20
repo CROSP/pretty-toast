@@ -105,7 +105,7 @@ Using completely custom view
 
 You can use any icon provided by [Android-Iconify](https://github.com/JoanZapata/android-iconify) library
 
-#Credits
+# Credits
 - [Joan Zapata](https://github.com/JoanZapata)  The creator of [Android-Iconify](https://github.com/JoanZapata/android-iconify)
 - [Pierry Borges](https://github.com/Pierry/SimpleToast) Thanks for the idea
 
